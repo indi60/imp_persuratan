@@ -3,7 +3,14 @@
 @section('content')
 	<div class="main">
 		<div class="main-content">
+			@if(session('sukses'))
 			<div class="container-fluid">
+				<div class="alert alert-success" role="alert">
+				  {{session('sukses')}}
+				</div>
+				@endif
+			
+				
 				<div class="row">
 					<div class="col-md12">
 						<div class="panel">

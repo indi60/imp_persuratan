@@ -19,7 +19,7 @@ Route::group(['middleware' => 'auth'],function(){
 		Route::get('/dashboard','DashboardController@index');
 		Route::get('/surat','SuratController@index');
 		Route::get('/surat1','Surat1Controller@index1');
-		Route::post('/surat1/create','Surat1Controller@create');
+		Route::post('/surat1/create','Surat1Controller@create')->name("surat1.create");
 		Route::post('/surat/create','SuratController@create');
 		Route::get('/surat1/{id}/edit1','Surat1Controller@edit');
 		Route::post('/surat1/{id}/update','Surat1Controller@update');

@@ -4,6 +4,11 @@
 	<div class="main">
 		<div class="main-content">
 			<div class="container-fluid">
+				@if(session('sukses'))
+				<div class="alert alert-success" role="alert">
+				 {{session('sukses')}}
+				</div>
+				@endif
 				<div class="row">
 					<div class="col-md12">
 						<div class="panel">
@@ -69,7 +74,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="/surat1/create" method="POST">
+        <form action="{{route('surat1.create')}}" method="POST" enctype="multipart/form-data">
         	{{csrf_field()}}
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">Tujuan</label>

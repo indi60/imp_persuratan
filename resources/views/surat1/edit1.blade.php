@@ -3,6 +3,11 @@
 <div class="main">
 		<div class="main-content">
 			<div class="container-fluid">
+				@if(session('sukses'))
+				<div class="alert alert-warning" role="alert">
+				  {{session('sukses')}}
+				</div>
+				@endif
 				<div class="row">
 					<div class="col-md12">
 						<div class="panel">

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Dashboard | Klorofil - Free Bootstrap Dashboard Template</title>
+	<title>Aplikasi Persuratan</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -28,7 +28,7 @@
 		<!-- NAVBAR -->
 		@include('layouts.includes._navbar')
 		<img src="{{asset('admin/assets/img/user.png')}}" class="img-circle" alt="Avatar">
-		<span></span> <i class="icon-submenu lnr lnr-chevron-down"></i>
+		<span>{{auth()->user()->name}}</span> <i class="icon-submenu lnr lnr-chevron-down"></i>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
 								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>

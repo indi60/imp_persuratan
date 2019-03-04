@@ -3,6 +3,7 @@
 <div class="main">
 		<div class="main-content">
 			<div class="container-fluid">
+				
 				<div class="row">
 					<div class="col-md12">
 						<div class="panel">
@@ -36,9 +37,9 @@
 @stop
 
 @section('content1')
-		@if(session('sukses'))
-		<div class="alert alert-success" role="alert">
-  		{{session('sukses')}}
+		@if(session('edit'))
+		<div class="alert alert-warning" role="alert">
+  		{{session('edit')}}
 	</div>
 		@endif
 		<div class="row">
