@@ -18,7 +18,7 @@
 									<h3 class="panel-title">Data Kategori Surat</h3>
 									<div class="right">
 	
-											<button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="lnr lnr-pencil"></i></button>
+											<a href="/surat/input" class="btn btn-success btn-sm">Input Data</a>
 									</div>
 											
 								</div>
@@ -38,6 +38,7 @@
 									<td><a href="/surat/{{$kategori_surat->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
 									<a href="/surat/{{$kategori_surat->id}}/delete" class="btn btn-danger btn-sm" 
 										onclick="return confirm('Yakin Mau Dihapus')">Delete</a>
+
 									</td>	
 								</tr>
 								@endforeach
