@@ -19,12 +19,20 @@
 						<div class="panel">
 								<div class="panel-heading">
 									<h3 class="panel-title">Data Surat</h3>
+									
+									
 									<div class="right">
 	
 											<a href="/surat1/input1" class="btn btn-success btn-sm">Input Data</a>
 									</div>
 											
 								</div>
+								<nav class="navbar navbar-light bg-light">
+  <form class="form-inline"  method="GET" action="/surat1">
+    <input name="cari" class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search" required autofocus>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+  </form>
+</nav>
 								<div class="panel-body">
 									<table class="table table-hover">
 										<thead>
@@ -37,7 +45,7 @@
 												<th>Kategori Surat</th>
 												<th>Tanggal Surat</th>
 												<th>Upload</th>
-												<th>Aksi</th>
+												<th>Opsi</th>
 
 											</tr>
 										</thead>
@@ -51,11 +59,19 @@
 									<td>{{$surat->surat->nama_kategori}}</td>
 									<td>{{$surat->tanggal_surat}}</td>
 									<td>{{$surat->upload}}</td>
-									<td><a href="/surat1/{{$surat->id}}/edit1" class="btn btn-warning btn-sm">Edit</a>
+									 <td><a href="{{asset('storage/upload/'.$surat->upload)}}" target="_blank" class="btn btn-primary btn-sm">
+									  <span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;View</a>
+									
+									
+									<a href="/surat1/{{$surat->id}}/edit1" class="btn btn-warning btn-sm">
+									<span class="glypicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit</a>
+										
+									
 									<a href="/surat1/{{$surat->id}}/delete" class="btn btn-danger btn-sm" 
-										onclick="return confirm('Yakin Mau Dihapus')">Delete</a>
-
-                                             <a href="{{asset('storage/upload/'.$surat->upload)}}" target="_blank" class="btn btn-primary btn-sm">View</a>
+										onclick="return confirm('Yakin Mau Dihapus')">
+										<span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete</a>
+									
+                                            
 									</td>	
 								</tr>
 								@endforeach

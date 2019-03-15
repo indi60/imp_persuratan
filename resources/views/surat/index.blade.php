@@ -28,16 +28,17 @@
 											<tr>
 												<th>Nama Kategori</th>
 												<th>Singkatan Kategori</th>
-												<th>Aksi</th>
+												<th>Opsi</th>
 											</tr>
 										</thead>
 										@foreach($data_kategori_surat as $kategori_surat)
 								<tr>
 									<td>{{$kategori_surat->nama_kategori}}</td>
 									<td>{{$kategori_surat->singkatan_kategori}}</td>
-									<td><a href="/surat/{{$kategori_surat->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+
+									<td><a href="/surat/{{$kategori_surat->id}}/edit" class="btn btn-warning btn-sm"><span class="glypicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit</a>
 									<a href="/surat/{{$kategori_surat->id}}/delete" class="btn btn-danger btn-sm" 
-										onclick="return confirm('Yakin Mau Dihapus')">Delete</a>
+										onclick="return confirm('Yakin Mau Dihapus')"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete</a>
 
 									</td>	
 								</tr>

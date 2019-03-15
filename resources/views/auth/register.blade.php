@@ -32,72 +32,63 @@
 
 
 
-@section('content')
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <form class="login100-form validate-form"  method="POST" action="{{ route('register') }}">
+<div class="limiter">
+        <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                <form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
                      {{ csrf_field() }}
-                    <span class="login100-form-title p-b-26">
-                        Welcome
+                    <span class="login100-form-title p-b-49">
+                     Register
                     </span>
-                    <span class="login100-form-title p-b-48">
-                       <img src="{{asset('admin/assets/img/th.jpeg')}}" width="150" class="img-circle" alt="Avatar">
-                    </span>
-@section('content')
 
-
-                <div class="card-body">
                   
 
-                        <div class="form-group">
-                            <div class="wrap-input100 validate-input">
-                                <input id="name" type="text" class="input100" name="name" value="{{ old('name') }}" required autofocus>
-                                    <span class="focus-input100" data-placeholder="Nama"></span>
+                        
+                            <div class="wrap-input100 validate-input m-b-23" data-validate = "name">
+                              <span class="label-input100" id="name" type="name"  name="name" value="{{ old('name') }}">Nama</span>
+                                
+                                     <input class="input100" type="text" name="name" placeholder="Nama">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
                                 @if ($errors->has('name'))
-                                    <span class="help-block" role="alert">
+                                   <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                        </div>
+                        
+                          <div class="wrap-input100 validate-input m-b-23" data-validate = "email">
 
-                        <div class="form-group">
-
-                            <div class="wrap-input100 validate-input">
-                                <input id="email" type="email" class="input100" name="email" value="{{ old('email') }}" required>
-                                     <span class="focus-input100" data-placeholder="Email"></span>
-                                @if ($errors->has('email'))
-                                    <span class="help-block" role="alert">
+                        <span class="label-input100" id="email" type="email"  name="email" value="{{ old('email') }}">Email</span>
+                        <input class="input100" type="email" name="email" placeholder="Masukan Email">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                        @if ($errors->has('email'))
+                        <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                           
-
-                            <div class="wrap-input100 validate-input">
-                                <input id="password" type="password" class="input100" name="password" required>
-                                 <span class="focus-input100" data-placeholder="Password"></span>
+                    </div>
+                            <div class="wrap-input100 validate-input m-b-23" data-validate = "password">
+                              <span class="label-input100" id="password" type="password"  name="password" value="{{ old('password') }}">Password</span>
+                                
+                                     <input class="input100" type="password" name="password" placeholder=Password>
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
                                 @if ($errors->has('password'))
-                                    <span class="help-block" role="alert">
+                                   <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            
-
-                            <div class="wrap-input100 validate-input">
-                                <input id="password-confirm" type="password" class="input100" name="password_confirmation" required>
-                                <span class="focus-input100" data-placeholder="Confirm Password"></span>
+                            <div class="wrap-input100 validate-input m-b-23" data-validate = "name">
+                              <span class="label-input100" id="password-confirm" type="password"  name="password_confirmation" value="{{ old('password_confirmation') }}">Confirm Password</span>
+                                
+                                     <input class="input100" type="password" name="password_confirmation" placeholder="Confirm Password">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                                @if ($errors->has('password_confirmation'))
+                                   <span class="help-block">
+                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                        </div>
-
                        <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
@@ -106,8 +97,7 @@
                                 </button>
                             </div>
                         </div>
-                            </div>
-                        </div>
+                           
                     </form>
                 </div>
 

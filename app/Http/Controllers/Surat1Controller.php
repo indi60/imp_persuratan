@@ -59,7 +59,7 @@ class Surat1Controller extends Controller
     $filename = 'surat-upload-' . time() . '.' . $file->getClientOriginalExtension();
 
     // save to storage/app/photos as the new $filename
-    $path = $file->storeAs('public/upload', $filename);
+    $path = $file->storeAs('public/upload/', $filename);
 
 
         // if($surat=="Y"){

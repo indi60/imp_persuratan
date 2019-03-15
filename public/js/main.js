@@ -3,11 +3,7 @@
     "use strict";
 
 
-<<<<<<< HEAD
-    /*==================================================================
-=======
      /*==================================================================
->>>>>>> 87c1af29e080255c08e1df2503ef1992f6267daa
     [ Focus input ]*/
     $('.input100').each(function(){
         $(this).on('blur', function(){
@@ -70,28 +66,6 @@
         $(thisAlert).removeClass('alert-validate');
     }
     
-<<<<<<< HEAD
-    /*==================================================================
-    [ Show pass ]*/
-    var showPass = 0;
-    $('.btn-show-pass').on('click', function(){
-        if(showPass == 0) {
-            $(this).next('input').attr('type','text');
-            $(this).find('i').removeClass('zmdi-eye');
-            $(this).find('i').addClass('zmdi-eye-off');
-            showPass = 1;
-        }
-        else {
-            $(this).next('input').attr('type','password');
-            $(this).find('i').addClass('zmdi-eye');
-            $(this).find('i').removeClass('zmdi-eye-off');
-            showPass = 0;
-        }
-        
-    });
-
-=======
     
->>>>>>> 87c1af29e080255c08e1df2503ef1992f6267daa
 
 })(jQuery);

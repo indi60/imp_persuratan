@@ -31,17 +31,7 @@ Route::group(['middleware' => 'auth'],function(){
 		Route::get('/surat/{id}/delete','SuratController@delete');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::group(['prefix'=> 'admin','middleware'=>'Admin'],function(){
-	Route::get('/surat1','Surat1Controller@index1');
-	Route::resource('/surat1','surat1');
-	Route::resource('/surat','surat');
-});
-Route::group(['prefix'=> 'user','middleware'=>'User'],function(){
-	Route::get('/surat','SuratController@index');
-	Route::resource('/surat1','surat1');
-	Route::resource('/surat','surat');
-});
+
 Route::get('/logout', 'HomeController@logout')->name('logout');
 
 

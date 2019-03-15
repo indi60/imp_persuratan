@@ -8,7 +8,7 @@
 					<div class="col-md12">
 						<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title">Edit Data Kategori Surat </h3>
+									<h3 class="panel-title">Input Data Kategori Surat </h3>
 								</div>
 								<div class="panel-body">
 									<form action="/surat/create" method="POST">
